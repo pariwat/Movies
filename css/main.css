@@ -1,0 +1,84 @@
+/* 
+    Document   : main
+    Created on : Jun 24, 2014, 7:20:19 PM
+    Author     : master
+    Description:
+        Purpose of the stylesheet follows.
+*/
+@font-face {
+    font-family: "RobotoMedIuM";
+    src:url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RobotoCondensedBold";
+    src: url("../fonts/Roboto/RobotoCondensed-Bold.ttf") format("truetype");
+}
+
+body{
+    background: url(../images/lines_texture1102.jpg) no-repeat center center fixed;
+    margin: 0px;
+}
+iframe{
+    border:0px;
+    margin: 0px auto;
+    display: block;
+}
+label{
+    color: rgb(241, 241, 241);
+    font-family: "RobotoMedIuM";
+}
+#coveryoutube{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+div#movies-title{
+    width: 100%;
+    height: 85px;
+    padding-top: 15px;
+    background-image: url(../images/gray.png) !important;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 100px 1px #000000;
+}
+div#movies-title>label{
+    font-size: 1.6em;
+    color: rgb(241, 241, 241);
+    margin-left: 15px;
+}
+
+div#movies-title>label:nth-child(3){
+    font-family: "RobotoCondensedBold";
+    letter-spacing: 15px;
+    position: absolute;
+    right: 1%;
+    font-size: 2.4em;
+}
+#listmovies{
+    width: 98%;
+    height: 1000px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#listmovies>label {
+    font-size: 1.2em;
+}
+#listmovies>div{
+    width: 70%;
+    height: 100%;
+    padding-top: 20px;
+    display: -webkit-box;
+}
+#listmovies>div>div{
+    width: 150px;
+    height: 250px;
+    background-color: black;
+    box-shadow: 1px 1px 3px 1px #000000;
+    margin-left: 60px;
+    display:inline-block;
+    margin-top: 30px;
+    color: rgb(241, 241, 241);
+    font-family: "RobotoMedIuM";
+    white-space: pre-line;
+    font-size: .8em;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
