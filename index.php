@@ -22,7 +22,7 @@
 
     </head>
     <body>
-        <div id="movies-title"><label>ดูหนังออนไลน์ HD ฟรี หนังไทย หนังเกลาหลี ต่างประเทศ ซี่รี่ย์เหลากลี</label><br/><label>Thai-Movies.net</label></div>
+        <div id="movies-title"><label>ดูหนังออนไลน์ HD ฟรี หนังไทย หนังเกาหลี ต่างประเทศ ซี่รี่ย์เกาหลี</label><br/><label>Thai-Movies.net</label></div>
         <div id='coveryoutube'>
             <iframe></iframe>
         </div>

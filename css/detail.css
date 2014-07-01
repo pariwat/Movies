@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 28, 2014, 5:40:09 PM
+    Author     : Chare
+*/
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: url(../images/lines_texture1102.jpg) no-repeat center center fixed;
+}
+.detail-main{
+    display: flex;
+    width: 100%;
+}
+.banner-left{
+    width: 20%;
+    word-wrap: break-word;
+    background-color: #000;
+    min-height: 1004px;
+    opacity: 0.3;
+}
+.banner-right{
+    width: 20%;
+    word-wrap: break-word;
+    background-color: #000;
+    min-height: 1004px;
+    opacity: 0.3;
+}
+.detail-content{
+    width: 60%;
+    word-wrap: break-word;
+}
+#banner-thai-movie{
+    background-color: gray;
+    width: 100%;
+    height: 145px;
+}
+div#movies-title {
+    width: 100%;
+    height: 85px;
+    padding-top: 15px;
+    background-image: url(../images/gray.png) !important;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 100px 1px #000000;
+}
+div#movies-title>label {
+    font-size: 1.6em;
+    color: rgb(241, 241, 241);
+    margin-left: 15px;
+}
+div#movies-title>label:nth-child(3) {
+    font-family: "RobotoCondensedBold";
+    letter-spacing: 5px;
+    font-size: 2em;
+    float: right;
+}
+#movie-detail{
+    display: flex;
+    width: 100%;
+    color: white;
+}
+#movie-detail>div:nth-child(1){
+    width: 30%;
+    padding-left: 5%;
+}
+#movie-detail>div:nth-child(1)>img{
+    width: 80%;
+}
+#movie-detail>div:nth-child(2){
+    width: 85%;
+}
+#movie-detail>div:nth-child(2)>p{
+    padding-right: 5%;
+    text-align: justify;
+}
+#movies-category>label{
+    color: blanchedalmond;
+}
+#detail-trailer{
+    color: white;
+    padding-left: 5%;
+    /*border: 1px solid white;*/
+    padding-right: 5%;
+    text-align: center;
+}
+#detail-true-movie{
+    color: white;
+    padding-left: 5%;
+    /*border: 1px solid white;*/
+}
+#detail-ft{
+    height: 85px;
+    background-image: url(../images/gray.png) !important;
+}
+#detail-trailer>iframe{
+    /*    width: 100%;
+        height: 300px;*/
+}
+#detail-trailer>h3{
+    float: left;
+    font-size: 1.6em;
+}
+#detail-true-movie>label{
+    float: left;
+    font-size: 1.6em;
+    position: absolute;
+}

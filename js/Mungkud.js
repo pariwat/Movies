@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-var DisablePH = false;
+var DisablePH = true;
 if (DisablePH)
-    var pubCovertop = ['401730.jpg', '400992.jpg', '401916.jpg', '392537.jpg']; // โฆษณาข้าง Youtube
+    var pubCovertop = ['401730.jpg', '400992.jpg', '401916.jpg', 'Publish.png']; // โฆษณาข้าง Youtube
 else
     var pubCovertop = ['Publish.png', 'Publish.png', 'Publish.png', 'Publish.png']; // โฆษณาข้าง Youtube
 //
@@ -20,7 +20,10 @@ $(function() {
     for (var i = 0; i < listcat.length; i++)
         $('#listmovies').append('<label>' + listcat[i] + '</label><div id="Category_' + i + '"></div>');
     for (var i = 0; i < moviefirstPage.length; i++) {
-        $('#listmovies>div').append('<div><img width="150" height="200" src="images/movieF/' + moviefirstPage[i].url + '" /><p>' + moviefirstPage[i].name + '</p></div>');
+        var item = $('<div path="'+moviefirstPage[i].data+'"><img width="150" height="200" src="images/movieF/' + moviefirstPage[i].url + '" /><p>' + moviefirstPage[i].name + '</p></div>').click(function(){
+           window.open('movies/'+$(this).attr('path')); 
+        });
+        $('#listmovies>div').append(item);
     }
 
 
