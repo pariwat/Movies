@@ -1,3 +1,9 @@
+<?php
+require_once './MovieService.php';
+$ms = new MovieService();
+$rs = $ms->categories();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -49,6 +55,16 @@
         <![endif]-->
         <!----nipon--css--stype-->
         <link rel="stylesheet" href="css/stock.css">
+
+        <script>
+            function validateForm() {
+                var x = document.uploadForm.title.value
+                if (x == null || x == "") {
+                    alert("First name must be filled out");
+                    return false;
+                }
+            }
+        </script>
 
     </head>
     <body class="full_width">
@@ -114,9 +130,9 @@
                 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                     <div class="navbar-inner">
                         <div class="container">
-                         
+
                             <a class="brand pull-left" href="dashboard.html">Movie Upload</a>
-                            
+
                             <ul class="nav navbar-nav user_menu pull-right">
                                 <!--                                <li class="hidden-phone hidden-tablet">
                                                                     <div class="nb_boxes clearfix">
@@ -143,10 +159,10 @@
                                                                     </ul>
                                                                 </li>-->
                                 <!--</ul>-->
-                                
+
                                 <li class="divider-vertical hidden-sm hidden-xs"></li>
                                 <li class="dropdown">
-                                       <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-list-alt"></span> List <b></b></a>
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-list-alt"></span> List <b></b></a>
                                 </li>
                                 </li
 
@@ -276,96 +292,98 @@
                         <!--Data-Table-Admin-->
 
                         <div class="row">
-                            <div class="col-sm-10 col-md-10">
-                                <h3 class="heading"><b>Upload</b></h3>
-
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12">
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-12">
-                                                <div class="col-md-12" style=""> 
-                                                    <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
-                                                        Category<span class="f_req">*</span>
-                                                    </label>     
-                                                    <div class="col-md-8"> 
-                                                        <select class="form-control" style="width: auto; height: auto ; margin-top: 1% ; margin-right: -5%">
-                                                            <option>Category1</option>
-                                                            <option>Category2</option>
-                                                            <option>Category3</option>
-                                                            <option>Category4</option>
-                                                        </select>
+                            <form name="uploadForm" action="uploader.php" method="post" enctype="multipart/form-data">
+                                <div class="col-sm-10 col-md-10">
+                                    <h3 class="heading"><b>Upload</b></h3>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="col-md-12" style=""> 
+                                                        <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
+                                                            Category<span class="f_req">*</span>
+                                                        </label>     
+                                                        <div class="col-md-8"> 
+                                                            <select name="category" class="form-control" style="width: auto; height: auto ; margin-top: 1% ; margin-right: -5%">
+                                                                <?php
+                                                                foreach ($rs as $value) {
+                                                                    echo '<option value=' . $value->id . '>' . $value->name . '</option>';
+                                                                }
+                                                                ?>                                                                
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-12">
-                                                <div class="col-md-12" style=""> 
-                                                    <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
-                                                        Name<span class="f_req">*</span>
-                                                    </label>     
-                                                    <div class="col-md-8"> 
-                                                        <input name="w_name" id="w_name" class="form-control" type="text" placeholder ="Name">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="col-md-12" style=""> 
+                                                        <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
+                                                            Title<span class="f_req">*</span>
+                                                        </label>     
+                                                        <div class="col-md-8"> 
+                                                            <input name="title" id="w_name" class="form-control" type="text" placeholder ="Title">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-12">
-                                                <div class="col-md-12" style=""> 
-                                                    <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
-                                                        Picture<span class="f_req">*</span>
-                                                    </label>     
-                                                    <div class="col-md-8"> 
-                                                        <input name="w_name" id="w_name" class="form-control" type="text" placeholder ="Picture">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="col-md-12" style=""> 
+                                                        <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
+                                                            Thumbnail<span class="f_req">*</span>
+                                                        </label>     
+                                                        <div class="col-md-8"> 
+                                                            <input name="cover" id="w_name" class="form-control" type="file" placeholder ="Picture">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-12">
-                                                <div class="col-md-12" style=""> 
-                                                    <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
-                                                        Detail<span class="f_req">*</span>
-                                                    </label>     
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="col-md-12" style=""> 
+                                                        <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
+                                                            Descriptions<span class="f_req">*</span>
+                                                        </label>     
 
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row" style="margin-top: -4% ; margin-right: 2%">
-                                            <div class="col-sm-12 col-md-12">
-                                                <div class="col-md-8" style=""> 
-                                                    <textarea name="wg_message" id="wg_message" cols="10" rows="6" class="form-control auto_expand" style="overflow: hidden; word-wrap: break-word; max-height: 134px; min-height: 134px; height: 134px;"></textarea>
+                                            <div class="row" style="margin-top: -4% ; margin-right: 2%">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="col-md-8" style=""> 
+                                                        <textarea name="desc" id="wg_message" cols="10" rows="6" class="form-control auto_expand" style="overflow: hidden; word-wrap: break-word; max-height: 134px; min-height: 134px; height: 134px;"></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-12">
-                                                <div class="col-md-12" style=""> 
-                                                    <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
-                                                        Code Html<span class="f_req">*</span>
-                                                    </label>     
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="col-md-12" style=""> 
+                                                        <label class="col-sm-2 control-label" style="margin-top: 1% ; margin-right: -5%" id="" >
+                                                            Video Link<span class="f_req">*</span>
+                                                        </label>     
 
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row" style="margin-top: -4% ; margin-right: 2%">
-                                            <div class="col-sm-12 col-md-12">
-                                                <div class="col-md-8" style=""> 
-                                                    <textarea name="wg_message" id="wg_message" cols="10" rows="6" class="form-control auto_expand" style="overflow: hidden; word-wrap: break-word; max-height: 134px; min-height: 134px; height: 134px;"></textarea>
+                                            <div class="row" style="margin-top: -4% ; margin-right: 2%">
+                                                <div class="col-sm-12 col-md-12">
+                                                    <div class="col-md-8" style=""> 
+                                                        <textarea name="videoLink" id="wg_message" cols="10" rows="6" class="form-control auto_expand" style="overflow: hidden; word-wrap: break-word; max-height: 134px; min-height: 134px; height: 134px;"></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-12"> 
-                                                <div class="col-md-offset-7 col-md-2" style="margin-left: 65%"> 
-                                                    <a class="btn btn-gebo btn-default btn-sm">Upload</a>  
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12"> 
+                                                    <div class="col-md-offset-7 col-md-2" style="margin-left: 65%"> 
+                                                        <input type="submit" Value="Upload" class="btn btn-gebo btn-default btn-sm">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
 
                             <!----Data-Table-Admin-End--->
 
