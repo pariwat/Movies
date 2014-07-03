@@ -1,16 +1,4 @@
-<?php
 
-/** This file is part of KCFinder project
-  *
-  *      @desc Upload files using drag and drop
-  *   @package KCFinder
-  *   @version 2.51
-  *    @author Forum user (updated by Pavel Tzonkov)
-  * @copyright 2010, 2011 KCFinder Project
-  *   @license http://www.opensource.org/licenses/gpl-2.0.php GPLv2
-  *   @license http://www.opensource.org/licenses/lgpl-2.1.php LGPLv2
-  *      @link http://kcfinder.sunhater.com
-  */?>
 
 browser.initDropUpload = function() {
     if ((typeof(XMLHttpRequest) == 'undefined') ||
