@@ -1,5 +1,11 @@
 var moviefirstPage = [
-    {'name':'The Adventures of Tintin (film)','url':'2M_11.jpeg','data':'2M_11.php'
+    {'name':'Deja Vu เดจาวู ภารกิจเดือด ล่าทะลุเวลา [HD]','url':'2M_14.jpeg','data':'2M_14.php'
+    },
+    {'name':'ESCAPE PLAN แหกคุกมหาประลัย HD พากษ์ไทยโรง','url':'2M_13.jpeg','data':'2M_13.php'
+    },
+    {'name':'FINAL DESTINATION 5 – ไฟนอล เดสติเนชั่น 5 โกงตายสุดขีด','url':'2M_12.jpeg','data':'2M_12.php'
+    },
+    {'name':'THE FINAL DESTINATION 4 – โกงตาย ทะลุตาย','url':'2M_11.jpeg','data':'2M_11.php'
     },
     {'name':'I FRANKENSTEIN 2014 สงครามล้างพันธุ์อมตะ','url':'2M_10.jpeg','data':'2M_10.php'
     },
