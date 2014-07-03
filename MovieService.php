@@ -33,6 +33,7 @@ class MovieService {
         $data = array(
             'name' => $title,
             'description' => $desc,
+            'video_link' => $videoLink,
             'createdate' => 'now()',
             'lastupdate' => 'now()'
         );
@@ -59,5 +60,44 @@ class MovieService {
         
         return $rs;
     }
+    
+    public function movies($index = 0, $num = 0) {
+        $OPTOIN = '';
+        if ($num > 0) {
+            $OPTOIN = " LIMIT $index,$num";
+        }
+        $id = $this->db->query('SELECT * FROM movies_item' . $OPTOIN);
+        $rs = array();
+        while ($row = $this->db->fetch_array($id)) {
+            $r = new stdClass();
+            $r->id = $row['id'];
+            $r->title = $row['name'];
+            $r->desc = $row['description'];
+            $r->display = $row['candisplay'];
+            $rs[] = $r;
+        }
+        
+        return $rs;
+    }
+    
+    public function detail($id) {
+        //SELECT i.*, ic.cid FROM movies_item as i INNER JOIN movies_itemcategories as ic ON ic.mid = i.id
+        
+        $id = $this->db->query('SELECT * FROM movies_item WHERE id=' . $id);
+        $r = new stdClass();
+        while ($row = $this->db->fetch_array($id)) {
+            
+            $r->id = $row['id'];
+            $r->title = $row['name'];
+            $r->desc = $row['description'];
+            $r->display = $row['candisplay'];
+            $r->videoLink = $row['video_link'];
+        }
+        
+        return $r;
+    }
 
 }
+
+//$m = new MovieService();
+//var_dump($m->detail(0));
