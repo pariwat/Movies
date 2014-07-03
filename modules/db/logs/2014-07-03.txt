@@ -1,0 +1,71 @@
+Time : 06:09:38
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 06:09:37
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 06:08:55
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 06:08:54
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 06:07:14
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 06:05:42
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 06:01:31
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 06:01:29
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:59:20
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:53:32
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:52:00
+SQLSTATE[HY000] [2005] Unknown MySQL server host 'http://thai-movies.net' (2)
+
+Time : 05:51:57
+SQLSTATE[HY000] [2005] Unknown MySQL server host 'http://thai-movies.net' (2)
+
+Time : 05:51:20
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:48:21
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:47:18
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:47:08
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:47:00
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:46:53
+SQLSTATE[HY000] [2005] Unknown MySQL server host '192.111.148.22:3306' (2)
+
+Time : 05:46:41
+SQLSTATE[HY000] [2005] Unknown MySQL server host '192.111.148:3306' (2)
+
+Time : 05:46:40
+SQLSTATE[HY000] [2005] Unknown MySQL server host '192.111.148:3306' (2)
+
+Time : 05:46:38
+SQLSTATE[HY000] [2005] Unknown MySQL server host '192.111.148:3306' (2)
+
+Time : 05:46:12
+SQLSTATE[HY000] [2003] Can't connect to MySQL server on '192.111.148' (4)
+
+Time : 05:44:28
+SQLSTATE[28000] [1045] Access denied for user 'thaimovi_web'@'202.28.78.243' (using password: YES)
+
+Time : 05:35:45
+SQLSTATE[28000] [1045] Access denied for user 'thaimoi_web'@'202.28.78.243' (using password: YES)
