@@ -33,7 +33,8 @@ class MovieService {
         $data = array(
             'name' => $title,
             'description' => $desc,
-            'video_link' => $videoLink,
+            'video_link' => base64_encode($videoLink),
+            'thumbnail' => $cover,
             'createdate' => 'now()',
             'lastupdate' => 'now()'
         );

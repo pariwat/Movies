@@ -10,7 +10,7 @@ $posterPath = 'images/poster/'. uniqid('img_').'.jpg';
 if(move_uploaded_file($_FILES["cover"]["tmp_name"],$posterPath)) {
     $ms = new MovieService();
     $ms->addMovie($category, $title, $posterPath, $desc, $videoLink);
-    echo "Success";
+    echo $posterPath;
 } else {
     echo "Fail";
 }
