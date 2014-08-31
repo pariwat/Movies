@@ -17,14 +17,14 @@ var listcat = ['หนังใหม่อัพเดต'];
 // Init List Menu
 $(function() {
 
-    for (var i = 0; i < listcat.length; i++)
-        $('#listmovies').append('<label>' + listcat[i] + '</label><div id="Category_' + i + '"></div>');
-    for (var i = 0; i < moviefirstPage.length; i++) {
-        var item = $('<div path="'+moviefirstPage[i].data+'"><img width="150" height="200" src="images/movieF/' + moviefirstPage[i].url + '" /><p>' + moviefirstPage[i].name + '</p></div>').click(function(){
-           window.open('movies/'+$(this).attr('path')); 
-        });
-        $('#listmovies>div').append(item);
-    }
+//    for (var i = 0; i < listcat.length; i++)
+//        $('#listmovies').append('<label>' + listcat[i] + '</label><div id="Category_' + i + '"></div>');
+//    for (var i = 0; i < moviefirstPage.length; i++) {
+//        var item = $('<div path="'+moviefirstPage[i].data+'"><img width="150" height="200" src="images/movieF/' + moviefirstPage[i].url + '" /><p>' + moviefirstPage[i].name + '</p></div>').click(function(){
+//           window.open('movies/'+$(this).attr('path')); 
+//        });
+//        $('#listmovies>div').append(item);
+//    }
 
 
 });

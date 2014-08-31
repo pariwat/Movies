@@ -75,6 +75,7 @@ class MovieService {
             $r->title = $row['name'];
             $r->desc = $row['description'];
             $r->display = $row['candisplay'];
+            $r->thumbnail = $row['thumbnail'];
             $rs[] = $r;
         }
         
@@ -93,6 +94,7 @@ class MovieService {
             $r->desc = $row['description'];
             $r->display = $row['candisplay'];
             $r->videoLink = $row['video_link'];
+            $r->thumbnail = $row['thumbnail'];
         }
         
         return $r;
